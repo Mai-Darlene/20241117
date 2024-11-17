@@ -154,6 +154,7 @@ export default function RotatePDF() {
                       onDrop={handleOnDrop}
                   >
                       <input
+                          // @ts-ignore
                           ref={buttonRef}
                           type="file"
                           id="file-btn"
