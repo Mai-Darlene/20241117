@@ -2,14 +2,14 @@
 "use client";
 import styles from "./RotatePDF.module.css";
 import Image from "next/image";
-import {useState,useRef} from "react";
+import {useState, useRef, LegacyRef} from "react";
 import Head from 'next/head';
 import PDFViewer from "./pages/component/PDFViewer/index";
 
 
 
 export default function RotatePDF() {
-    const buttonRef = useRef<HTMLButtonElement| null>(null)
+    const buttonRef = useRef<LegacyRef<HTMLInputElement> | undefined>()
   const [displayNav, setDisplayNav] = useState<boolean>(false);
     const [displayStatus, setDisplayStatus] = useState<number>(0); // 0 = draggable, 1 = loading, 2 = normal
     const [file, setFile] = useState<any>(null);
