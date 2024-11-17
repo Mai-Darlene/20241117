@@ -1,0 +1,261 @@
+
+.logo_box{
+    /*官网字体用Tiempos，但是没有找到用罗马字体代替*/
+    /*font-family: Tiempos, serif;*/
+    font-family: "Times New Roman";
+    margin:10px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.logo_icon{
+    width: 22px;
+    height: 17px;
+    margin-right: 5px;
+}
+.header{
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    /*padding: 10px;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu_icon {
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+}
+.navigation{
+    display: flex;
+    margin:10px;
+    padding: 0;
+}
+.navigation li{
+    box-sizing: border-box;
+    list-style: none;
+    padding:10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.navigation li:hover{
+    text-decoration: underline;
+}
+.navigation_small{
+    box-sizing: border-box;
+    background: white;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    transform: translateX(-100%);
+    right: -100%;
+    border-top: 1px solid #e5e3da;
+    padding:10px;
+}
+.navigation_small li{
+    list-style: none;
+    padding:10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+@media screen and (min-width: 770px)  {
+    .navi_small_box{
+        display: none;
+    }
+    .navi_big_box{
+        display: block;
+    }
+}
+@media screen and (max-width: 770px)  {
+    .navi_small_box{
+        display: block;
+    }
+    .navi_big_box{
+        display: none;
+    }
+}
+.main_content{
+    box-sizing: border-box;
+    width: 100%;
+    /*min-height: 696px;*/
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: #f7f5ee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main_title{
+
+    font-family: "Times New Roman";
+    color: black;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+}
+
+.tips{
+    margin:20px 128px 0px;
+    color:rgb(75 85 99)
+}
+.upload_box{
+    margin-top: 2.5rem;
+    width: 275px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    box-sizing: border-box;
+    border:1px dashed #e5e3da;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.upload_icon{
+    width: 32px;
+    height: 32px;
+}
+.upload_tip{
+    margin-top: 20px;
+    font-size: .875rem;
+    font-weight: 500;
+}
+.loading_box,.view_header {
+    margin-top: 2.5rem;
+}
+
+
+
+.rotate_all,.remove_pdf{
+    box-sizing: border-box;
+    color: white;
+    padding: 10px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+}
+.rotate_all:hover,.remove_pdf:hover{
+    border: none;
+}
+.rotate_all{
+    background: #FF612F;
+}
+.remove_pdf{
+    background: #1f2937;
+}
+.zoom_box{
+    background: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.zoom_icon{
+    width: 20px;
+    height: 20px;
+}
+.view_header{
+    display: flex;
+}
+.view_header li {
+    margin-left: 12px;
+}
+.view_header li:first-child {
+    margin-left: 0px;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.rotating_image {
+    animation: rotate 1s linear infinite;
+}
+@media screen and (max-width: 1206px) {
+    .footer_box{
+        box-sizing: border-box;
+        margin-top: 4rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+@media screen and (min-width: 1206px)  {
+    .footer_box{
+        box-sizing: border-box;
+        width: 1206px;
+        margin-top: 4rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+.function_box{
+    border-top: 1px solid #e5e3da;
+    padding: 64px 32px 32px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo_circle{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background: black;
+    border-radius: 15px;
+}
+.whiteLogo_icon{
+    position: absolute;
+    top: 7px;
+    left: 4px;
+    width: 20px;
+    height: 15px;
+}
+.bottom_text{
+    min-width: 348px;
+    font-size: .875rem;
+    margin-top: 32px;
+    color: rgb(75,85,99);
+}
+.logo_list{
+    display: flex;
+    padding: 0;
+    margin-top: 32px;
+}
+.logo_list li{
+    list-style: none;
+    margin-right: 20px;
+}
+.list_icon{
+    width: 32px;
+    height: 1.5rem;
+}
+.footer_item_box{
+    display: flex;
+    flex-direction: column;
+}
+.footer_item_list li{
+    /*min-width: 348px;*/
+    font-size: 14px;
+    color: #4B5563;
+    margin-top: 16px;
+}
+.footer_item_list li:hover {
+    color: black;
+    cursor: pointer;
+}
+.footer_item_list li:first-child{
+    margin-top: 40px;
+}
+
