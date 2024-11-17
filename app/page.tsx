@@ -141,7 +141,7 @@ export default function RotatePDF() {
                   <div
                       id="drop"
                       className={styles.upload_box}
-                      onClick={() => document.querySelector('#file-btn').click()}
+                      onClick={() => document?.querySelector('#file-btn')?.click()}
                       onDragOver={handleOnDragOver}
                       onDrop={handleOnDrop}
                   >
