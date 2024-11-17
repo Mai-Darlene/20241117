@@ -2,6 +2,7 @@
 "use client";
 import { useState} from 'react';
 import dynamic from 'next/dynamic';
+// @ts-ignore
 import { Document, Page,pdfjs} from 'react-pdf';
 import {PDFDocument, RotationTypes} from 'pdf-lib'; // 引入 pdf-lib
 import Image from "next/image";
