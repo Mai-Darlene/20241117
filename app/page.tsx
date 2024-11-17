@@ -2,13 +2,14 @@
 "use client";
 import styles from "./RotatePDF.module.css";
 import Image from "next/image";
-import {useState} from "react";
+import {useState,useRef} from "react";
 import Head from 'next/head';
 import PDFViewer from "./pages/component/PDFViewer/index";
 
 
 
 export default function RotatePDF() {
+    const buttonRef = useRef(null)
   const [displayNav, setDisplayNav] = useState<boolean>(false);
     const [displayStatus, setDisplayStatus] = useState<number>(0); // 0 = draggable, 1 = loading, 2 = normal
     const [file, setFile] = useState<any>(null);
@@ -55,6 +56,11 @@ export default function RotatePDF() {
     const handleOnDragOver = (e:any) => {
         e.stopPropagation();
         e.preventDefault();
+    };
+    const handleOnClick = () => {
+        if(buttonRef.current)
+        buttonRef.current?.click()
+        // document?.querySelector('#file-btn').click()
     };
 
     // Handle file drop
@@ -141,11 +147,12 @@ export default function RotatePDF() {
                   <div
                       id="drop"
                       className={styles.upload_box}
-                      onClick={() => document?.querySelector('#file-btn')?.click()}
+                      onClick={handleOnClick}
                       onDragOver={handleOnDragOver}
                       onDrop={handleOnDrop}
                   >
                       <input
+                          ref={buttonRef}
                           type="file"
                           id="file-btn"
                           onChange={selectFile}
